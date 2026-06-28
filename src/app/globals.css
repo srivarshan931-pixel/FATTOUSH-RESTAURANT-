@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #063C2E;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-forest-dark: #063C2E;
+  --color-forest-deep: #03221A;
+  --color-gold-warm: #D4B26F;
+  --color-gold-pale: #E8D5B5;
+  --color-gold-accent: #B89047;
+  
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-forest-dark);
+  color: #ffffff;
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-forest-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-warm);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-pale);
+}
+
+/* Custom classes for layout and animations */
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.text-gold {
+  color: var(--color-gold-warm);
+}
+
+.border-gold {
+  border-color: var(--color-gold-warm);
+}
+
+.bg-gold {
+  background-color: var(--color-gold-warm);
+}
+
+/* Lenis smooth scrolling helper */
+html.lenis {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
